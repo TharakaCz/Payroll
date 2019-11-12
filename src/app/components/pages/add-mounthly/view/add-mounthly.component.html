@@ -1,0 +1,35 @@
+<br>
+<h2 class="text-center">Add Mounthly</h2>
+<hr class="my-4">
+<form>
+  <div class="col-md-12">
+    <div class="form-group">
+      <label>Add Employee</label>
+      <select class="form-control" id="employee" name="employee" (change)="setEmployee($event.target.value)">
+        <option>Select Employee</option>
+        <option *ngFor="let emplotee of employeeArray" [value]="emplotee.empId">{{emplotee.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Employee Salary</label>
+      <input type="text" class="form-control" id="salary" placeholder="Enter Slary" name="salary"  [(ngModel)]="salary">
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Select Type</label>
+        <select class="form-control" id="type" name="type" (change)="setPay($event.target.value)">
+          <option  *ngFor="let payd of pay" [value]="payd.value">{{payd.name}}</option>
+
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Calculate Value</label>
+      <input type="text" class="form-control" id="value" placeholder="Enter Slary" name="value" [(ngModel)]="value" >
+    </div>
+    <button type="button" class="btn btn-primary" (click)="save()">save</button>
+  </div>
+</form>
