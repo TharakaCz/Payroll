@@ -1,0 +1,12 @@
+<br>
+<h2 class="text-center">Add Department</h2>
+<hr class="my-4">
+  <form #frmDepartment="ngForm" >
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Discription</label>
+        <textarea type="text" class="form-control" id="discription" [(ngModel)]="departmentDTO.discription"  placeholder="Enter Discription" name="discription"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="save()" >Save</button>
+    </div>
+  </form>
